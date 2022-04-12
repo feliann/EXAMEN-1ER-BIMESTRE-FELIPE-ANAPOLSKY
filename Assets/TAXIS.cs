@@ -26,21 +26,20 @@ public class TAXIS : MonoBehaviour
     void Start()
     {
         if (dias_trabajo < 5)
-        {
-            Debug.Log("No se puede calcular tan pocos dias");
+        { 
+            Debug.Log(" No se puede calcular tan pocos dias ");
         }
-        else if (dias_trabajo < dias_lluvia)
+        else if (dias_trabajo < dias_lluvia )
         {
-            Debug.Log("No pueden haber mas dias de lluvia que de trabajo");
+            Debug.Log(" No pueden haber mas dias de lluvia que de trabajo ");
         }
-
 
         precio = (90 % 15) * 130 * (dias_trabajo-dias_lluvia);
-        precio_lluvia = (110 % 15) * 130 * dias_lluvia;
+        precio_lluvia = ((110 % 15) * 130) * dias_lluvia;
         costo_total_de_combustible = (precio + precio_lluvia) * taxis;
 
 
-        Debug.Log("Una flota de" + taxis + " unidades trabajando durante" + dias_trabajo + " días implicará un gasto de" + costo_total_de_combustible + " pesos en concepto de combustible");
+        Debug.Log(" Una flota de " + taxis + " unidades trabajando durante " + dias_trabajo + " días implicará un gasto de " + costo_total_de_combustible + " pesos en concepto de combustible");
 
     }
 
